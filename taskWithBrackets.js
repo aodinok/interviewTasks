@@ -8,13 +8,13 @@ const isClosingBracket = (chr) => [')', '}'].indexOf(chr) >= 0
 function checkBrackets (bracketsStr) {
   for (let i = 0; i < someStr.length; i++) {
     if (isOpeningBracket(someStr[i])) {
-      stack.push(someStr[i]);
+      stack.push(someStr[i])
     }
     if (isClosingBracket(someStr[i])) {
-      const lastBracket = stack.pop();
+      const lastBracket = stack.pop()
       switch (someStr[i]) {
-        case ')': if (lastBracket !== '(') return false; break;
-        case '}': if (lastBracket !== '{') return false; break;
+        case ')': if (lastBracket !== '(') return false; break
+        case '}': if (lastBracket !== '{') return false; break
       }
     }
   }
